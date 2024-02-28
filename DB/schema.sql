@@ -69,3 +69,11 @@ CREATE TABLE Recipe_rating (
     FOREIGN KEY (recipe_id) REFERENCES Recipe(recipe_id),
     FOREIGN KEY (user_id) REFERENCES Users(user_id)
 );
+
+CREATE TABLE User_category (
+	user_id INT,
+    category_id INT,
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (category_id) REFERENCES Category(category_id),
+    PRIMARY KEY (user_id, category_id)
+);

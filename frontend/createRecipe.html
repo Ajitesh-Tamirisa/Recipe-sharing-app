@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Recipe - Recipe Sharing App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+<div class="container mt-4"> <!-- Added mt-4 class for top margin -->
+  <div class="white-box p-4"> <!-- Added white-box and p-4 classes for white box and padding -->
+    <h2>Create Recipe</h2>
+    <form id="createRecipeForm">
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" class="form-control" id="title" placeholder="Enter title" required>
+      </div>
+      <div class="form-group">
+        <label for="cookingTime">Cooking Time:</label>
+        <select class="form-control" id="cookingTime" required>
+          <option value="">Select cooking time</option>
+          <option value="15">15 mins</option>
+          <option value="30">30 mins</option>
+          <option value="45">45 mins</option>
+          <option value="60">1 hr</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea class="form-control" id="description" rows="3" placeholder="Enter description" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="image">Upload Image:</label>
+        <input type="file" class="form-control-file" id="image" accept="image/*" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+  </div>
+</div>
+
+<script src="create_recipe.js"></script> <!-- Add your JavaScript file for handling form submission -->
+</body>
+</html>

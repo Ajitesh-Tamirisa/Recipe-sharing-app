@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>User Registration - Recipe Sharing App</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
 <div class="overlay"></div>
 <div class="container">
-  <h2 class="text-center my-4">User Registration</h2>
   <div class="row justify-content-center">
-    <div class="col-md-6">
-      <form>
+    <div class="col-md-6 white-box"> <!-- Add white-box class here -->
+      <h2 class="text-center my-4">User Registration</h2> <!-- Move the text inside the white box -->
+      <form id="registrationForm">
         <div class="form-group">
           <label for="name">Name</label>
           <input type="text" class="form-control" id="name" placeholder="Enter Name">
@@ -27,22 +27,52 @@
           <input type="password" class="form-control" id="password" placeholder="Password">
         </div>
         <div class="form-group">
-          <label for="confirm-password">Confirm Password</label>
-          <input type="password" class="form-control" id="confirm-password" placeholder="Confirm Password">
-        </div>
-        <div class="form-group">
           <label for="bio">Bio</label>
           <input type="text" class="form-control" id="bio" placeholder="Bio">
         </div>
         <div class="form-group">
-          <label for="dietary-preferences">Dietary Preferences</label>
-          <input type="text" class="form-control" id="dietary-preferences" placeholder="Enter dietary preferences">
+          <label for="allergy-info">Allergy Info</label>
+          <select multiple class="form-control" id="allergy-info">
+            <option value="1">No Peanuts</option>
+            <option value="2">Lactose Free</option>
+            <option value="3">No Shellfish</option>
+            <option value="4">Gluten Free</option>
+            <option value="5">No Tree Nuts</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="interested-category">Interested Category</label>
+          <select multiple class="form-control" id="interested-category">
+            <option value="1">Appetizer</option>
+            <option value="2">Main Course</option>
+            <option value="3">Dessert</option>
+            <option value="4">Side Dish</option>
+            <option value="5">Soup</option>
+            <option value="6">Italian Cuisine</option>
+            <option value="7">Mexican Cuisine</option>
+            <option value="8">Indian Cuisine</option>
+            <option value="9">Chinese Cuisine</option>
+            <option value="10">Japanese Cuisine</option>
+            <option value="11">French Cuisine</option>
+            <option value="12">Mediterranean Cuisine</option>
+            <option value="13">American Cuisine</option>
+            <option value="14">Thai Cuisine</option>
+            <option value="15">Greek Cuisine</option>
+            <option value="16">Vegetarian</option>
+            <option value="17">Vegan</option>
+            <option value="18">Low-Carb</option>
+          </select>
         </div>
         <button type="submit" class="btn btn-primary">Register</button>
       </form>
+      <div id="successMessage" class="mt-3" style="display: none;">
+        <div class="alert alert-success" role="alert">
+          Registration successful! You can now login.
+        </div>
+      </div>
     </div>
   </div>
 </div>
-
+<script src="register.js"></script>
 </body>
 </html>

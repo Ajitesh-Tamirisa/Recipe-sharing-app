@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Recipe Sharing App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Recipe Sharing</a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="create_recipe.html">Create Recipe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="userProfile.html">
+              <img src="images/user.png" alt="User Profile Picture" class="mr-2" style="width: 40px; height: 40px; border-radius: 50%;">
+              <span id="userName"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row mt-4">
+      <div class="col">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="popular-tab" data-toggle="tab" href="#popular" role="tab" aria-controls="popular" aria-selected="true">Popular</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="dietary-preference-tab" data-toggle="tab" href="#dietary-preference" role="tab" aria-controls="dietary-preference" aria-selected="false">Dietary Preference</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="interests-tab" data-toggle="tab" href="#interests" role="tab" aria-controls="interests" aria-selected="false">Interests</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="popular" role="tabpanel" aria-labelledby="popular-tab">
+            <!-- Content for popular recipes tab -->
+            <!-- Add your content here -->
+            <h2>Popular Recipes</h2>
+            <div class="custom-block bg-white shadow-lg recipe-info">
+                <a href="">
+                    <div class="d-flex">
+                        <div>
+                            <h5 class="mb-2">Recipe Name</h5>
+
+                            <p class="mb-0">Recipe Description.</p>
+                        </div>
+                    </div>
+
+                    <img src="images/appetizer.png" class="custom-block-image img-fluid" alt="">
+                </a>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="dietary-preference" role="tabpanel" aria-labelledby="dietary-preference-tab">
+            <!-- Content for recipes based on dietary preference tab -->
+            <!-- Add your content here -->
+            <h2>Recipes based on Dietary Preference</h2>
+            <div class="custom-block bg-white shadow-lg recipe-info">
+                <a href="">
+                    <div class="d-flex">
+                        <div>
+                            <h5 class="mb-2">Recipe Name</h5>
+
+                            <p class="mb-0">Recipe Description.</p>
+                        </div>
+                    </div>
+
+                    <img src="images/appetizer.png" class="custom-block-image img-fluid" alt="">
+                </a>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="interests" role="tabpanel" aria-labelledby="interests-tab">
+            <!-- Content for recipes based on interests tab -->
+            <!-- Add your content here -->
+            <h2>Recipes based on Interests</h2>
+            <div class="custom-block bg-white shadow-lg recipe-info">
+                <a href="">
+                    <div class="d-flex">
+                        <div>
+                            <h5 class="mb-2">Recipe Name</h5>
+
+                            <p class="mb-0">Recipe Description.</p>
+                        </div>
+                    </div>
+
+                    <img src="images/appetizer.png" class="custom-block-image img-fluid" alt="">
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="homePage.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

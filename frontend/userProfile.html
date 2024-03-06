@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container mt-4"> <!-- Added mt-4 class for top margin -->
+    <div class="white-box p-4"> 
+    <div class="container" style="padding-top: 20px;">
+        <div class="row align-items-center">
+            <div class="col-auto">
+                <!-- User Image -->
+                <img src="images/user.png" class="rounded-circle" alt="User Image" style="width: 50px; height: 50px;">
+            </div>
+            <div class="col">
+                <!-- User Profile Text -->
+                <h2>User Profile</h2>
+            </div>
+        </div>
+        <button id="editButton" class="btn btn-primary">Edit Profile</button>
+        <form id="profileForm">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Username" readonly>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Email" readonly>
+            </div>
+            <div class="form-group">
+                <label for="bio">Bio</label>
+                <textarea class="form-control" id="bio" rows="3" readonly></textarea>
+            </div>
+            <div class="form-group">
+                <label for="allergy">Allergy Info</label>
+                <input type="text" class="form-control" id="allergy" placeholder="Allergy Info" readonly>
+            </div>
+            <div class="form-group">
+                <label for="categories">Interested Categories</label>
+                <input type="text" class="form-control" id="categories" placeholder="Interested Categories" readonly>
+            </div>
+            <button id="saveButton" class="btn btn-success" style="display: none;">Save Changes</button>
+        </form>
+        
+        <!-- Create Recipe Button -->
+        <a href="createRecipe.html" class="btn btn-primary">Create Recipe</a>
+        
+        <!-- Section for User Recipes -->
+        <section id="userRecipes">
+            <h2>User Recipes</h2>
+            <div class="row">
+                <!-- User recipe cards will be dynamically added here -->
+            </div>
+        </section>
+    </div>
+    </div>
+    </div>
+    <script src="userProfile.js"></script>
+</body>
+</html>

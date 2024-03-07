@@ -16,32 +16,34 @@
                 <!-- User Image -->
                 <img src="images/user.png" class="rounded-circle" alt="User Image" style="width: 50px; height: 50px;">
             </div>
-            <div class="col">
+            <div class="row">
                 <!-- User Profile Text -->
                 <h2>User Profile</h2>
             </div>
         </div>
-        <button id="editButton" class="btn btn-primary">Edit Profile</button>
-        <form id="profileForm">
+        <form class="mt-2" id="profileForm">
+            <div class="my-3 mx-0 form-group">                
+                <button id="editButton" class="btn btn-primary mx-2">Edit Profile</button>
+            </div>
             <div class="form-group">
                 <label for="username">Username</label>
-                <input type="text" class="form-control" id="username" placeholder="Username" readonly>
+                <input type="text" class="form-control" id="username" placeholder="Username" value = "John Doe" readonly>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Email" readonly>
+                <input type="email" class="form-control" id="email" placeholder="Email" value = "johndoe@email.com" readonly>
             </div>
             <div class="form-group">
                 <label for="bio">Bio</label>
-                <textarea class="form-control" id="bio" rows="3" readonly></textarea>
+                <textarea class="form-control" id="bio" rows="3" readonly>I enjoy making food and love to get to know about deserts from around the world</textarea>
             </div>
             <div class="form-group">
                 <label for="allergy">Allergy Info</label>
-                <input type="text" class="form-control" id="allergy" placeholder="Allergy Info" readonly>
+                <input type="text" class="form-control" id="allergy" placeholder="Allergy Info" value="No Peanuts" readonly>
             </div>
             <div class="form-group">
                 <label for="categories">Interested Categories</label>
-                <input type="text" class="form-control" id="categories" placeholder="Interested Categories" readonly>
+                <input type="text" class="form-control" id="categories" placeholder="Interested Categories" value="Deserts" readonly>
             </div>
             <button id="saveButton" class="btn btn-success" style="display: none;">Save Changes</button>
         </form>
@@ -50,9 +52,9 @@
         <a href="createRecipe.html" class="btn btn-primary">Create Recipe</a>
         
         <!-- Section for User Recipes -->
-        <section id="userRecipes">
+        <section class="mt-4" id="userRecipes">
             <h2>User Recipes</h2>
-            <div class="row">
+            <div class="row" id="userRecipes">
                 <!-- User recipe cards will be dynamically added here -->
             </div>
         </section>

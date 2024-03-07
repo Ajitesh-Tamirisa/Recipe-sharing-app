@@ -67,7 +67,7 @@ function fetchDietaryPreferenceRecipes() {
                 <h6 class="card-subtitle mb-2 text-muted">Average Rating: ${recipe.averageRating.toFixed(2)} (${recipe.ratingCount} ratings)</h6>
                 <img src="${recipe.image1Url}" class="img-fluid rounded-circle" style="object-fit: cover; width: 250px; height: 250px;" alt="Image"><br/>
                 <h5 class="card-text">${recipe.description}</h5>
-                <h5><a href="/recipePage.html?id=${recipe.recipeId}" class="card-link">View Recipe</a></h5>
+                <h5><a href="./recipePage.html?id=${recipe.recipeId}" class="card-link">View Recipe</a></h5>
               </div>
             </div>`;
           });
@@ -95,7 +95,7 @@ function fetchInterestBasedRecipes() {
                 <h6 class="card-subtitle mb-2 text-muted">Average Rating: ${recipe.averageRating.toFixed(2)} (${recipe.ratingCount} ratings)</h6>
                 <img src="${recipe.image1Url}" class="img-fluid rounded-circle" style="object-fit: cover; width: 250px; height: 250px;" alt="Image"><br/>
                 <h5 class="card-text">${recipe.description}</h5>
-                <h5><a href="/recipePage.html?id=${recipe.recipeId}" class="card-link">View Recipe</a></h5>
+                <h5><a href="./recipePage.html?id=${recipe.recipeId}" class="card-link">View Recipe</a></h5>
               </div>
             </div>`;
           });

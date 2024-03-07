@@ -13,23 +13,27 @@
         <div class="white-box"> <!-- Wrap content with white box -->
             <div class="row">
                 <div class="col">
-                    <h2>Recipe Name</h2>
+                    <h2 id="recipeName">Recipe Name</h2>
                 </div>
                 <div class="col-auto">
-                    <!-- Display Cooking Time -->
-                    <p>Cooking Time: 30 minutes</p>
+                    <p>Cooking Time: 20 minutes</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
                     <!-- Display Average Rating -->
-                    <p>Average Rating: 4.5 stars</p>
+                    <p id="avgRating"></p>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
                     <!-- Display Description -->
-                    <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in quam at ligula ultrices vestibulum sit amet nec odio.</p>
+                    <p id="recipeDescription"></p>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col">
+                    <p id="recipeImage"></p>
                 </div>
             </div>
             <div class="row mt-3">
@@ -76,9 +80,46 @@
                     <h3>Reviews</h3>
                     <ul class="list-group">
                         <!-- Reviews will be dynamically added here -->
-                        <li class="list-group-item">Review 1</li>
-                        <li class="list-group-item">Review 2</li>
-                        <li class="list-group-item">Review 3</li>
+                        <li class="list-group-item">
+                            <div style="display: flex; align-items: center;">
+                                <img src="images/user.png" alt="User Profile Picture" class="mr-2" style="width: 40px; height: 40px; border-radius: 50%;">
+                                <h5>John Doe</h5>
+                                <span class="pt-2 mr-2 pr-2" style="position: absolute; top: 0; right: 0;">3 stars</span>
+                            </div><br/>                         
+                            <p>Delicious and easy to make!</p>
+                        </li>
+                        <li class="list-group-item">
+                            <div style="display: flex; align-items: center;">
+                                <img src="images/user.png" alt="User Profile Picture" class="mr-2" style="width: 40px; height: 40px; border-radius: 50%;">
+                                <h5>Brett Lee</h5>
+                                <span class="pt-2 mr-2 pr-2" style="position: absolute; top: 0; right: 0;">3 stars</span>
+                            </div><br/>                         
+                            <p>Very tasty!</p>
+                        </li>
+                        <li class="list-group-item">
+                            <div style="display: flex; align-items: center;">
+                                <img src="images/user.png" alt="User Profile Picture" class="mr-2" style="width: 40px; height: 40px; border-radius: 50%;">
+                                <h5>Arya Stark</h5>
+                                <span class="pt-2 mr-2 pr-2" style="position: absolute; top: 0; right: 0;">1 stars</span>
+                            </div><br/>                         
+                            <p>Didn't like the recipe. Turned out bad.</p>
+                        </li>
+                        <li class="list-group-item">
+                            <div style="display: flex; align-items: center;">
+                                <img src="images/user.png" alt="User Profile Picture" class="mr-2" style="width: 40px; height: 40px; border-radius: 50%;">
+                                <h5>Akshay Kumar</h5>
+                                <span class="pt-2 mr-2 pr-2" style="position: absolute; top: 0; right: 0;">5 stars</span>
+                            </div><br/>                         
+                            <p>Simple recipe. My family loved it!</p>
+                        </li>
+                        <li class="list-group-item">
+                            <div style="display: flex; align-items: center;">
+                                <img src="images/user.png" alt="User Profile Picture" class="mr-2" style="width: 40px; height: 40px; border-radius: 50%;">
+                                <h5>Ajitesh</h5>
+                                <span class="pt-2 mr-2 pr-2" style="position: absolute; top: 0; right: 0;">2 stars</span>
+                            </div><br/>                         
+                            <p>Didn't like it</p>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -88,6 +129,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="recipe.js"></script>
+    <script src="recipePage.js"></script>
 </body>
 </html>

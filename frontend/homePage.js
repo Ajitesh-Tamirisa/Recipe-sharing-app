@@ -33,9 +33,10 @@ function fetchPopularRecipes() {
           result.forEach(recipe => {
             popularContent.innerHTML += `
             <div class="card">
-              <div class="card-body">
+              <div class="card-body text-center">
                 <h4 style="color:black">${recipe.title}</h4>
                 <h6 class="card-subtitle mb-2 text-muted">Average Rating: ${recipe.averageRating.toFixed(2)} (${recipe.ratingCount} ratings)</h6>
+                <img src="${recipe.image1Url}" class="img-fluid rounded-circle" style="object-fit: cover; width: 250px; height: 250px;" alt="Image"><br/>
                 <h5 class="card-text">${recipe.description}</h5>
                 <h5><a href="#" class="card-link">View Recipe</a></h5>
               </div>

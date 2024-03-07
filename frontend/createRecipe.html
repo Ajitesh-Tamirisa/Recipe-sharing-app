@@ -33,13 +33,46 @@
       </div>
       <div class="form-group">
         <label for="image">Upload Image:</label>
-        <input type="file" class="form-control-file" id="image" accept="image/*" required>
+        <input type="file" class="form-control-file" id="image" accept="image/*">
+      </div>
+      <div class="form-group">
+        <label for="allergy-info">Allergy Info</label>
+        <select multiple class="form-control" id="allergy-info">
+          <option value="1">No Peanuts</option>
+          <option value="2">Lactose Free</option>
+          <option value="3">No Shellfish</option>
+          <option value="4">Gluten Free</option>
+          <option value="5">No Tree Nuts</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="category">Category</label>
+        <select multiple class="form-control" id="category">
+          <option value="1">Appetizer</option>
+          <option value="2">Main Course</option>
+          <option value="3">Dessert</option>
+          <option value="4">Side Dish</option>
+          <option value="5">Soup</option>
+          <option value="6">Italian Cuisine</option>
+          <option value="7">Mexican Cuisine</option>
+          <option value="8">Indian Cuisine</option>
+          <option value="9">Chinese Cuisine</option>
+          <option value="10">Japanese Cuisine</option>
+          <option value="11">French Cuisine</option>
+          <option value="12">Mediterranean Cuisine</option>
+          <option value="13">American Cuisine</option>
+          <option value="14">Thai Cuisine</option>
+          <option value="15">Greek Cuisine</option>
+          <option value="16">Vegetarian</option>
+          <option value="17">Vegan</option>
+          <option value="18">Low-Carb</option>
+        </select>
       </div>
       <button type="submit" class="btn btn-primary">Create</button>
     </form>
   </div>
 </div>
 
-<script src="create_recipe.js"></script> <!-- Add your JavaScript file for handling form submission -->
+<script src="createRecipe.js"></script> 
 </body>
 </html>

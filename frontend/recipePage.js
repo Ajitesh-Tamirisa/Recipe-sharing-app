@@ -17,7 +17,8 @@ $(document).ready(function(){
         document.getElementById("recipeName").innerHTML = result.title;
         document.getElementById("recipeDescription").innerHTML = result.description;
         document.getElementById("avgRating").innerHTML = `Average Rating: ${result.averageRating.toFixed(2)} (${result.ratingCount} ratings)`;
-        document.getElementById("recipeImage").innerHTML = `<img src="${result.image1Url}" class="img-fluid rounded-circle" style="object-fit: cover; width: 350px; height: 350px;" alt="Image"><br/>`
+        document.getElementById("recipeImage").innerHTML = `<img src="${result.image1Url}" class="img-fluid rounded-circle" style="object-fit: cover; width: 350px; height: 350px;" alt="Image"><br/>`;
+        document.getElementById("cookingTime").innerHTML = "Cooking Time: "+result.cookingTime+" minutes";
     })
     .catch((error) => console.error(error));
 })

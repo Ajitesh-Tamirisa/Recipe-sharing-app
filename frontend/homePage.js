@@ -4,6 +4,9 @@ const userId = localStorage.getItem("userId");
 const userName = localStorage.getItem("name");
 
 $(document).ready(function() {
+
+  $('a[href="#popular"]').tab('show');
+
   // Event listener for tab clicks
   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
       var target = $(e.target).attr("href"); // Get the target tab id
@@ -29,7 +32,7 @@ function fetchPopularRecipes() {
         .then((result) => {
           console.log(result)
           const popularContent = document.getElementById('popular');
-          popularContent.innerHTML = '<h2>Popular Recipes</h2>';
+          // popularContent.innerHTML = '<h2>Popular Recipes</h2>';
           result.forEach(recipe => {
             popularContent.innerHTML += `
             <div class="card">
@@ -58,7 +61,7 @@ function fetchDietaryPreferenceRecipes() {
         .then(response => response.json())
         .then(data => {
           const dietaryPreferenceContent = document.getElementById('dietaryPreferences');
-          dietaryPreferenceContent.innerHTML = '<h2>Recipes based on your Dietary Preferences</h2>';
+          // dietaryPreferenceContent.innerHTML = '<h2>Recipes based on your Dietary Preferences</h2>';
           data.forEach(recipe => {
             dietaryPreferenceContent.innerHTML += `
             <div class="card">
@@ -86,7 +89,7 @@ function fetchInterestBasedRecipes() {
         .then(data => {
           console.log(data)
           const dietaryPreferenceContent = document.getElementById('interests');
-          dietaryPreferenceContent.innerHTML = '<h2>Recipes based on your Interests</h2>';
+          // dietaryPreferenceContent.innerHTML = '<h2>Recipes based on your Interests</h2>';
           data.forEach(recipe => {
             dietaryPreferenceContent.innerHTML += `
             <div class="card">

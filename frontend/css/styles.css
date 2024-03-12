@@ -101,4 +101,13 @@ body {
 
     
   }
+
+  .hideLink{
+    color: black;
+    text-decoration: none;
+  }
+  .hideLink:hover{
+    color: black;
+    text-decoration: none;
+  }
   

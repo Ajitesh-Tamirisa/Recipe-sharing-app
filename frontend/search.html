@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="search.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <p class="h4"><strong><img src="./images/chef.png" alt="Icon" width="48" height="48"></i><a class="hideLink" href="homePage.html">&nbspRecipe Sharing App</a></p></strong>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search Recipes" aria-label="Search" id="searchInput">
+                  <button class="btn my-2 my-sm-0" onclick="navigateToSearchPage(event)"><img src="./images/search.png" alt="Icon" width="20" height="20">&nbspSearch</button>
+                </form>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="createRecipe.html"><img src="./images/create.png" alt="Icon" width="20" height="20">&nbspCreate Recipe</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="userProfile.html">
+                  <img src="images/user.png" alt="User Profile Picture" class="mr-2" style="width: 40px; height: 40px; border-radius: 50%;">
+                  <span id="userName"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <section class="mt-4" id="results">
+        <div class="container">
+            <h2 id="header">Search Results</h2>
+            <div class="card mb-3 bg-light">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="filterCookingTime"><h5>Filter by Cooking Time:</h5></label>
+                            <select class="form-control" id="filterCookingTime">
+                                <option value="all">All</option>
+                                <option value="15">15 minutes</option>
+                                <option value="30">30 minutes</option>
+                                <option value="45">45 minutes</option>
+                                <option value="60">1 hour</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="filterRating"><h5>Filter by Rating:</h5></label>
+                            <select class="form-control" id="filterRating">
+                                <option value="all">All</option>
+                                <option value="5">5 stars</option>
+                                <option value="4">4 stars and above</option>
+                                <option value="3">3 stars and above</option>
+                                <option value="2">2 stars and above</option>
+                                <option value="1">1 stars and above</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="sort"><h5>Sort by:</h5></label>
+                            <select class="form-control" id="sort">
+                                <option value="none">None</option>
+                                <option value="ratingDesc">Rating (High to Low)</option>
+                                <option value="ratingAsc">Rating (Low to High)</option>
+                                <option value="cookingTimeAsc">Cooking Time (Low to High)</option>
+                                <option value="cookingTimeDesc">Cooking Time (High to Low)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="searchResults">
+                <!-- Recipe cards will be dynamically added here -->
+            </div>
+        </div>
+        
+        
+    </section>
+    
+    
+</body>
+</html>

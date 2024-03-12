@@ -25,7 +25,7 @@ $(document).ready(function(){
 
 function getRecipeIdFromUrl() {
     const urlParams = new URLSearchParams(window.location.search);
-    console.log(urlParams.get('id'))
+    // console.log(urlParams.get('id'))
     return urlParams.get('id');
   }
 

@@ -74,7 +74,7 @@ function addReview(){
     const raw = JSON.stringify({
     "rating": rating,
     "review": review,
-    "username": userName,
+    "reviewerName": userName,
     "recipeId": getRecipeIdFromUrl(),
     "userId": userId
     });
@@ -90,6 +90,7 @@ function addReview(){
 
     fetch("http://localhost:8080/review", requestOptions)
     .then((response) => {
+        console.log(response.text())
         if (!response.ok || response.status!=200) {
             alert('A network error occured. Please try again later');
             location.reload();

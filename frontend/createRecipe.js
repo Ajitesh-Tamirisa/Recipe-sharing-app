@@ -50,7 +50,7 @@ function uploadImageAndCreateRecipe() {
 
         const recipeData = {
           title: title,
-          //cookingTime: cookingTime,
+          cookingTime: cookingTime,
           description: description,
           userId: userId, 
           image1Url: downloadURL, // Include the image URL in the recipe data

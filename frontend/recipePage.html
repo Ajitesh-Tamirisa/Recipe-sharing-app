@@ -55,7 +55,7 @@
                                 </div>
                                 <div class="modal-body">
                                     <!-- Review form -->
-                                    <form id="reviewForm">
+                                    <form id="reviewForm" onsubmit="addReview(); return false;">
                                         <div class="form-group">
                                             <label for="rating">Rating (out of 5):</label>
                                             <input type="number" class="form-control" id="rating" name="rating" min="1" max="5" required>

@@ -60,5 +60,48 @@ function getRecipeIdFromUrl() {
     const urlParams = new URLSearchParams(window.location.search);
     // console.log(urlParams.get('id'))
     return urlParams.get('id');
-  }
+}
+
+function addReview(){
+    let rating = document.getElementById("rating").value;
+    let review = document.getElementById("review").value;
+    let userName = localStorage.getItem("name");
+    let userId = localStorage.getItem("userId");
+
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    const raw = JSON.stringify({
+    "rating": rating,
+    "review": review,
+    "username": userName,
+    "recipeId": getRecipeIdFromUrl(),
+    "userId": userId
+    });
+
+    console.log(raw);
+
+    const requestOptions = {
+    method: "POST",
+    headers: myHeaders,
+    body: raw,
+    redirect: "follow"
+    };
+
+    fetch("http://localhost:8080/review", requestOptions)
+    .then((response) => {
+        if (!response.ok || response.status!=200) {
+            alert('A network error occured. Please try again later');
+            location.reload();
+        }
+        console.log('Response status code:', response.status);
+        if(response.status === 200){
+            alert("Review posted successfully!");
+            location.reload()
+        }
+        return response.text();
+    })
+    .then((result) => console.log(result))
+    .catch((error) => console.error(error));
+}
 
